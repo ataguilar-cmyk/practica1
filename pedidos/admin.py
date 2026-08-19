@@ -2,6 +2,12 @@ from django.contrib import admin
 
 from .models import Producto, Pedido
 
+
+
+admin.site.site_header = "Administración Cafeteria Toño"
+admin.site.site_title = "Panel Cafeteria Toño"
+admin.site.index_title = "Control operador Cafeteria Toño"
+
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
     list_display = ('id', 'nombre', 'precio', 'categoria', 'disponible')
